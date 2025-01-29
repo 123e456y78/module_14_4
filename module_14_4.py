@@ -11,7 +11,7 @@ import asyncio
 
 
 from crud_functions import get_all_products
-api = '7314899914:AAHcsc1SyUJccc3bK3jNxYvAkCdAfC8fxas'
+api = ' !!!!!!!!!!!!!!!!!!!!!!!!!!!'
 bot = Bot(token=api)
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
