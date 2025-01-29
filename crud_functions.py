@@ -1,6 +1,6 @@
 import sqlite3
 def initiate_db():
-    connection = sqlite3.connect('data_products1.db')
+    connection = sqlite3.connect('data_products.db')
     cursor = connection.cursor()
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS Products(
@@ -14,7 +14,7 @@ def initiate_db():
     connection.close()
 initiate_db()
 def insert_products():
-    connection = sqlite3.connect('data_products1.db')
+    connection = sqlite3.connect('data_products.db')
     cursor = connection.cursor()
     for i in range(1, 5):
         cursor.execute("INSERT INTO Products (title, description, price) VALUES (?, ?, ?)",
@@ -23,7 +23,7 @@ def insert_products():
     connection.close()
 insert_products()
 def delete_records():
-    connection = sqlite3.connect('data_products1.db')
+    connection = sqlite3.connect('data_products.db')
     cursor = connection.cursor()
     cursor.execute("DELETE FROM Products WHERE id BETWEEN 5 AND 16")
     connection.commit()
